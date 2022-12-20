@@ -33,14 +33,14 @@
             <h3>Introdução à HTML</h3>
             <p>HTML é uma sigla para representar o termo Linguagem de Marcação de HiperTexto, originado do inglês HyperText Markup Language. Portanto a HTML é uma linguagem para criar documentos com textos e outros elementos do meio digital, tais como imagens, sons e vídeos.</p>
             <p>Todos estes elementos serão ligados por meio de tags ou elementos, que vamos estudar nesta unidade/disciplina. As tags são recursos fundamentais da HTML. Abaixo segue exemplo de uma tag.</p>
-            <code>&ltimg src="foto.jpg"&gt</code>
+            &lt;img src="foto.jpg"&gt;
             <p>A tag apresentada acima é a tag img, que indica uma abreviação de image, que traduzindo é imagem. Note que a tag img tem o atributo src, que indica uma abreviação de source, que traduzindo é origem. Os atributos são recursos presentes na maioria das tags.</p>
             <p>Resumindo o conceito de tag com relação ao HTML:</p>
             <figure>
                 <img src="/front end 1/Semana 2/images/image1.JPG" alt="#" srcset="">
             </figure>
             <ul>
-                <li><strong>tag:</strong> etiqueta, rótulo ou marcação, exemplo <code>&ltimg …&gt</code>; é um exemplo de tag de imagem</li>
+                <li><strong>tag:</strong> etiqueta, rótulo ou marcação, exemplo &lt;img …&gt;; é um exemplo de tag de imagem</li>
                 <li><strong>atributo:</strong> característica que desejamos especificar, geralmente um atributo é seguido por sinal de igualdade, exemplo src=</li>
                 <li><strong>valor:</strong> geralmente fica entre aspas duplas. Em alguns casos, o valor pode ficar entre aspas simples, dependendo do padrão adotado. Vamos manter o padrão de aspas duplas.</li>
             </ul>
@@ -55,7 +55,36 @@
             </div>
         </section>
         <hr>
-        <br>        
+        <br>  
+        <section>
+            <h3>Estrutura básica</h3>
+            <p>Agora que já sabemos sobre tags, vamos explorar a estrutura básica de um documento HTML. Um documento HTML deve ter a declaração da tag inicial &lt;!DOCTYPE html&gt;, embora um documento HTML possa ser interpretado sem a declaração, ela é altamente recomendada.</p>
+            <p>A tag DOCTYPE pode ser escrita em minúscula, ou seja, não é case sensitive. Algumas
+                linguagens exigem a escrita usando letras maiúsculas em certas situações e não funcionam
+                caso escrevemos uma letra minúscula no lugar de uma letra maiúscula, por exemplo em
+                JavaScript uma variável definida como pi é diferente de uma variável definida como PI.
+                Podemos afirmar que HTML não é case sensitive, ou seja, tanto faz se escrevermos com letra
+                maiúscula ou minúscula, já a linguagem JavaScript é case sensitive. Sempre que possível
+                vamos obedecer ao padrão e digitar corretamente as letras.</p>
+            <figure>
+                <img src="/front end 1/Semana 2/images/image2.JPG" alt="#" srcset="">
+            </figure>
+            <p>A tag &lt;html&gt; é a primeira a ser aberta, antes dela sempre teremos apenas a tag !DOCTYPE. A tag
+                &lt;html&gt; é fechada na linha 11, da seguinte forma &lt;/html&gt;. A tag img não fechamos, apenas
+                abrimos. Mais adiante veremos exemplos de tag img com fechamento.</p>
+            <p>A tag &lt;head&gt; é utilizada para definir configurações do cabeçalho de nossa página tais como seu
+                conteúdo, título, palavras-chave e outras configurações que são processadas logo que a página é carregada.</p>
+            <p>Na tag &lt;head&gt; temos também inclusão de arquivos CSS e JS.</p>
+            <p>Os títulos são representados dentro da tag &lt;head&gt; e são considerados pelos motores de
+                busca, isso significa que se você deve sempre criar títulos relevantes e criativos para suas
+                páginas.</p>
+            <p>Um documento HTML deve ter apenas uma tag &lt;html&gt;. Tanto a tag &lt;head&gt; quanto a tag
+                &lt;body&gt; são únicas por padrão.</p>
+            <p>A próxima tag que vamos explorar é &lt;body&gt;. Nela podemos colocar tudo que desejamos exibir
+                para nosso usuário, tais como textos, figuras e links. No exemplo colocamos dentro da
+                tag &lt;body&gt; a tag &lt;p&gt; que representa um parágrafo no HTML e tag &lt;img&gt; que
+                utilizamos para adicionar uma imagem ao HTML.</p>
+            </section>      
     </main>
 </body>
 </html>
