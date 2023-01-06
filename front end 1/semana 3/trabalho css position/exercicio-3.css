@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ddd;
+}
+
+div {
+    margin: 2em;
+    padding: 1em;
+
+    background-color: #0f0f0f;
+    color: aliceblue;
+}
+
+.primeira {
+    border-radius: 1em;
+}
+
+.segunda {
+    height: 5em;
+    border: 3px solid red;
+    overflow-y: scroll;
+}
