@@ -17,10 +17,13 @@ div {
 
 .primeira {
     border-radius: 1em;
+    text-transform: uppercase;
+    text-align: right;
 }
 
 .segunda {
     height: 5em;
     border: 3px solid red;
     overflow-y: scroll;
+    text-align: justify;
 }
