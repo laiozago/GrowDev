@@ -50,3 +50,49 @@ body{
     left: 10vh;
     top: 10vh;
 }
+
+@media (orientation: portrait) {
+    .azul {
+        transform: translate(-50%, -50%);
+        height: 100vw;
+        width: 100vw;
+        position: absolute;
+        top: 50%;
+    }
+
+    .vermelha {
+        transform: translate(-50%, -50%);
+        height: 80vw;
+        width: 80vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .preta {
+        transform: translate(-50%, -50%);
+        height: 60vw;
+        width: 60vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .verde {
+        transform: translate(-50%, -50%);
+        height: 40vw;
+        width: 40vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .amarela {
+        transform: translate(-50%, -50%);
+        height: 20vw;
+        width: 20vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
