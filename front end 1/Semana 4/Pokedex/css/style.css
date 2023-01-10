@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+main {
+    background-color: rgb(255, 160, 122);
+    height: 100vh;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+}
+
+.pokedexImg {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pokedexImg img {
+    width: 400px;
+    height: 300px;
+}
+.squirtle-link:hover {
+    color: rgb(59, 59, 197);
+    text-shadow: 5px 5px 10px blue;
+}
+
+.pikachu-link:hover {
+    color: rgb(180, 180, 52);
+    text-shadow: 5px 5px 10px yellow;
+}
+
+nav {
+    padding-top: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+nav a {
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.div-esquerda {
+    width: 30%;
+    background-color: gray;
+    position: absolute;
+    height: 75vh;
+    left: 20px;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-radius: 20px;
+}
+
+.div-esquerda h2 {
+    margin: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.div-direita {
+    border-radius: 20px;
+    width: 65%;
+    background-color: rgb(211, 211, 211);
+    position: absolute;
+    height: 75vh;
+    text-align: center;
+    right: 20px;
+    margin-top: 50px;
+}
+
+.div-direita span {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 16px 0 20px 0;
+}
+
+#pokename {
+    font-size: 3em;
+}
+
+.tipo-pokemon {
+    position: absolute;
+    left: 50%;
+    vertical-align: middle;
+    transform: translate(-50%);
+    background-color: #87cefa;
+    width: 450px;
+    height: 90px;
+    font-size: 2.5em;
+    padding-top: 15px;
+    margin-top: 30px;
+}
+
+.eletrico {
+    position: absolute;
+    left: 50%;
+    vertical-align: middle;
+    transform: translate(-50%);
+    background-color: #f6d275;
+    width: 450px;
+    height: 90px;
+    font-size: 2.5em;
+    padding-top: 15px;
+    margin-top: 30px;
+}
