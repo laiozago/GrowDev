@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Exercício 10</title>
+    </head>
+    <body>
+        <div class="w3-bar w3-black">
+            <a href="./exercicio1.html" class="w3-bar-item w3-button">Exercício 1</a>
+            <a href="./exercicio2.html" class="w3-bar-item w3-button">Exercício 2</a>
+            <a href="./exercicio3.html" class="w3-bar-item w3-button">Exercício 3</a>
+            <a href="./exercicio4.html" class="w3-bar-item w3-button">Exercício 4</a>
+            <a href="./exercicio5.html" class="w3-bar-item w3-button">Exercício 5</a>
+            <a href="./exercicio6.html" class="w3-bar-item w3-button">Exercício 6</a>
+            <a href="./exercicio7.html" class="w3-bar-item w3-button">Exercício 7</a>
+            <a href="./exercicio8.html" class="w3-bar-item w3-button">Exercício 8</a>
+            <a href="./exercicio9.html" class="w3-bar-item w3-button">Exercício 9</a>
+            <a href="./exercicio10.html" class="w3-bar-item w3-button">Exercício 10</a>
+        </div>
+        <script>
+            // Obtém data atual
+            const anoAtual = new Date().getFullYear();
+            // Pede ano de nascimento da pessoa
+            const anoDeNascimento = prompt("Qual é o seu ano de nascimento?");
+            // Calcula idade da pessoa
+            const idade = anoAtual - anoDeNascimento;
+            // Verifica se a pessoa tem idade suficiente para votar
+            if (idade >= 18) {
+                console.log(
+                    "Você tem " + idade + " anos e pode votar este ano."
+                );
+            } else {
+                console.log(
+                    "Você tem " + idade + " anos e não pode votar este ano."
+                );
+            }
+        </script>
+    </body>
+</html>
