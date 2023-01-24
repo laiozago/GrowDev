@@ -3,28 +3,23 @@
 como mostrado abaixo:
 30 [29] 28 27 26 25 24 [23] 22 21 20 [19] 18 [17] 16...*/
 
-function primo(n) {
-    let divisores = 0
-    for (let i = 1; i <= n; i++) {
-        if (n%i==0) {
-            divisores++
+let i = 30; // variavel que guarda o primeiro numero da lista aser formada
+//let contadorDeDividores = 0;
+
+while(i >= 1){
+    let contador = 1;
+    let contadorDeDividores = 0;
+    while (contador <= i) {
+        if (i%contador == 0) {
+            contadorDeDividores++
         }
+        
+        contador++
     }
-    if (divisores>2) {
-        return false
-    } else {
-        return true
-    }
-}
-
-let i = 30 // Valor para alista começar
-
-while (i>1) {
-    if (primo(i)) {
+    if (contadorDeDividores == 2) {
         console.log(`[${i}]`);
     } else {
         console.log(`${i}`);
     }
     i--
 }
-console.log(1);
