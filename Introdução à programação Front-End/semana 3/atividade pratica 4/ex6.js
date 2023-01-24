@@ -17,9 +17,9 @@ function primo(n) {
     }
 }
 
-let i = 30
+let i = 30 // Valor para alista começar
 
-while (i>=1) {
+while (i>1) {
     if (primo(i)) {
         console.log(`[${i}]`);
     } else {
@@ -27,3 +27,4 @@ while (i>=1) {
     }
     i--
 }
+console.log(1);

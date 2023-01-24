@@ -9,7 +9,7 @@ const limiteSuperior = 250;
 
 let i = 1
 console.log(`Esses são os numeros que são multiplos de ${multiplo1}:`);
-while (i <= 250) {
+while (i <= limiteSuperior) {
     if (i%multiplo1==0) {
         console.log(i);
     }
@@ -19,7 +19,7 @@ while (i <= 250) {
 let k = 1;
 
 console.log(`Esses são os numeros que são multiplos de ${multiplo2}:`);
-while (k <= 250) {
+while (k <= limiteSuperior) {
     if (k%multiplo2==0) {
         console.log(k);
     }

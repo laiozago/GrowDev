@@ -16,4 +16,4 @@ while (pedro > lucas) { //tempo para ser maior que pedro
     anosPassados++
 }
 
-console.log(`Foram ${anosPassados-1} anos para Pedro e Lucas terem a mesma altura e ${anosPassados} anos para que Lucas seja mais alto que Pedro.`); //tempo para Lucas ser maior que pedro.
+console.log(`Foram ${anosPassados-1} anos para Pedro e Lucas terem a mesma altura e ${anosPassados} anos para que Lucas seja mais alto que Pedro.`);

@@ -8,8 +8,8 @@ quantidade de iterações também (i).
 ...
 */
 
-const n = 5; //numero que quero a tabuada
-const i = 10; //tabuada até que valor
+const n = prompt("Escolha um número:"); //numero que quero a tabuada
+const i = prompt("Quantas iterações:"); //tabuada até que valor
 
 let index = 1
 while (index <= i) {
