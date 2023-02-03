@@ -3,11 +3,14 @@ inteiros já preenchido e imprima todos os valores pares.*/
 
 function exercicio1() {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-    array.forEach(element => {
-        if (element % 2 == 0) {
-            alert(element);
+    const pares = [];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element%2 === 0) {
+            pares.push(element)
         }
-    });
+    }
+    alert(`Os pares são: ${pares}`)
 }
 
 /*2. Desenvolva um algoritmo para percorrer um vetor de 20 elementos
@@ -16,10 +19,12 @@ inteiros e no final mostre a soma de todos os elementos.*/
 function exercicio2() {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
     let soma = 0;
-    array.forEach(element => {
+    let string = array.join("+");
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
         soma += element;
-    });
-    alert(soma);
+    }
+    alert(`${string} = ${soma}`);
 }
 
 /*3. Desenvolva um algoritmo que preenche um vetor com os 4
@@ -56,11 +61,16 @@ retorne a união dos dois em um novo vetor.*/
 function exercicio4() {
     let array1 = [1,2,3,4,5,6,7,8,9,10];
     let array2 = [11,12,13,14,15,16,17,18,19,20];
-    let array3 = array1.concat(array2);
-    alert(`Array 1: ${array1} 
-    + 
-    Array 2: ${array2} 
-    = Array 3: ${array3}`);
+    let arrayUniao = [];
+    for (let i = 0; i < array1.length; i++) {
+        const numero = array1[i];
+        arrayUniao.push(numero)
+    }
+    for (let i = 0; i < array2.length; i++) {
+        const numero = array2[i];
+        arrayUniao.push(numero)
+    }
+    alert(arrayUniao);
 }
 
 /*5. Crie uma função que recebe um vetor de inteiros e um número
@@ -69,14 +79,15 @@ se não faz parte.*/
 
 function exercicio5() {
     let array = [1,2,3,4,5,6,7,8,9,10];
-    let numero = Number(prompt("Digite um número:"));
-    let resultado = array.includes(numero);
-    if (resultado) {
-        alert(`O número ${numero} está no array ${array}`);
-    } else {
-        alert(`O número ${numero} não está no array ${array}`);
-        
+    let numero = Number(prompt("Digite um número para saber se está no array:"));
+    for (let i = 0; i < array.length; i++) {
+        const num = array[i];
+        if (num === numero) {
+            alert(`O número ${numero} pertence ao array`);
+            return
+        }
     }
+    alert("Não pertence ao array!");
 }
 
 /*6. Escreva um algoritmo que solicite ao usuário a entrada de 5 nomes,
@@ -94,6 +105,11 @@ function exercicio6() {
         let nome = prompt("Digite um nome:");
         array.push(nome);
     }
+    let arrayIvertido = [];
+    for (let index = array.length-1; index >= 0 ; index--) {
+        const element = array[index];
+        arrayIvertido.push(element)
+    }
     alert(`Array normal: ${array}`);
-    alert(`Array invertido: ${array.reverse()}`);
+    alert(`Array invertido: ${arrayIvertido}`);
 }
