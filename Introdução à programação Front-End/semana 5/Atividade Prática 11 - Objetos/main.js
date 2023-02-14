@@ -115,18 +115,31 @@ Nome: Alessandro, Idade: 28, Salário: 2400
 Pessoas empregadas com salários maiores que 2500:
 Nome: Alessandro, Idade: 28, Salário: 2700
 Nome: Alessandro, Idade: 28, Salário: 3000 */
-const pessoas = [];
-let continuar = true;
-while (continuar) {
-    const pessoa = {
-        nome: prompt('Digite o nome'),
-        idade: prompt('Digite a idade'),
-        trabalhando: confirm('Trabalhando?'),
-    };
-    if (pessoa.trabalhando) {
-        pessoa.salario = prompt('Digite o salário');
+function cadastro() {
+    const pessoas = [];
+    let continuar = true;
+    while (continuar) {
+        const pessoa = {
+            nome: prompt('Digite o nome'),
+            idade: prompt('Digite a idade'),
+            trabalhando: confirm('Trabalhando?'),
+        };
+        if (pessoa.trabalhando) {
+            pessoa.salario = prompt('Digite o salário');
+        }
+        pessoas.push(pessoa);
+        continuar = confirm('Deseja continuar?');
     }
-    pessoas.push(pessoa);
-    continuar = confirm('Deseja continuar?');
+    pessoas.forEach(pessoa => {
+        if (pessoa.trabalhando) {
+            if (pessoa.salario > 2500) {
+                console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Salário: ${pessoa.salario}`);
+            } else {
+                console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Salário: ${pessoa.salario}`);
+            }
+        } else {
+            console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}`);
+        }
+    });
 }
-console.log(pessoas);
+cadastro();
