@@ -32,8 +32,8 @@ const quiz = document.getElementById('quiz');
 //*função para sortear dois numeros de -100 a +100 para o quiz e a operação
 function sortear() {
     const operacoes = ['+', '-', '*', '/'];
-    let num1 = Math.floor(Math.random() * 100);
-    let num2 = Math.floor(Math.random() * 100);
+    let num1 = Math.floor(Math.random() * 200) - 100;
+    let num2 = Math.floor(Math.random() * 200) - 100;
 
     let op = operacoes[Math.floor(Math.random() * 4)];
 
@@ -47,7 +47,7 @@ function sortear() {
     function criarOpcoes() {
         let opcoes = [];
         for (let i = 0; i < 3; i++) {
-            let opcao = Math.floor(Math.random() * 10000);
+            let opcao = Math.floor(Math.random() * 20000) - 10000;
                 opcoes.push(opcao);
         }
         return opcoes;
