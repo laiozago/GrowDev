@@ -7,41 +7,6 @@ const botao = document.getElementById('btnProximo');
 
 const quiz = document.getElementById('quiz');
 
-//*função para verificar se o resultado de uma divisão é uma dízima periódica
-function verificaDizima(dividendo, divisor) {
-    const restoAnterior = new Map();
-    let resto = dividendo % divisor;
-
-    while (resto !== 0 && !restoAnterior.has(resto)) {
-        restoAnterior.set(resto, true);
-        resto = (resto * 10) % divisor;
-    }
-
-    return resto !== 0;
-}
-
-//*função para calcular a fração mínima de uma divisão
-function calcularFracaoMinima(divisor, dividendo) {
-    // Verificar se o dividendo é zero
-    if (dividendo === 0) {
-        throw new Error("O dividendo não pode ser zero.");
-    }
-
-    // Calcular o máximo divisor comum usando o algoritmo de Euclides
-    let a = Math.abs(divisor);
-    let b = Math.abs(dividendo);
-    while (b !== 0) {
-        let temp = b;
-        b = a % b;
-        a = temp;
-    }
-    let mdc = a;
-
-    const [numerador, denominador] = [divisor / mdc, dividendo / mdc];
-    // Retornar a fração mínima
-    return [numerador, denominador];
-}
-
  //*função para calcular o resultado da operação
     function calcular(num1, num2, op) {
     let resultado;
@@ -56,22 +21,19 @@ function calcularFracaoMinima(divisor, dividendo) {
             resultado = num1 * num2;
             break;
         case '/':
-            //verifica se o resultado é uma dízima periódica
-            if (verificaDizima(num1,num2)){
-                sortear();//se for, sorteia novamente
-            }
-            const respostas = calcularFracaoMinima(num1,num2);//se não for, calcula a fração mínima
-            resultado = respostas[0] + '/' + respostas[1];
+            resultado = num1 / num2;
             break;
+        default:
+            sortear();//se não for nenhuma das operações, sorteia novamente
     }
     return resultado;
 }
 
-//função para sortear dois numeros de -100 a +100 para o quiz e a operação
+//*função para sortear dois numeros de -100 a +100 para o quiz e a operação
 function sortear() {
     const operacoes = ['+', '-', '*', '/'];
-    let num1 = Math.floor(Math.random() * 200) - 100;
-    let num2 = Math.floor(Math.random() * 200) - 100;
+    let num1 = Math.floor(Math.random() * 100);
+    let num2 = Math.floor(Math.random() * 100);
 
     let op = operacoes[Math.floor(Math.random() * 4)];
 
@@ -85,8 +47,8 @@ function sortear() {
     function criarOpcoes() {
         let opcoes = [];
         for (let i = 0; i < 3; i++) {
-            let opcao = Math.floor(Math.random() * 200) - 100;
-            opcoes.push(opcao);
+            let opcao = Math.floor(Math.random() * 10000);
+                opcoes.push(opcao);
         }
         return opcoes;
     }
@@ -106,7 +68,7 @@ function sortear() {
     colocarOpcoes();
 }
 
-//função para verificar se a opção escolhida está correta
+//*função para verificar se a opção escolhida está correta
 function verificar() {
     let opcaoEscolhida = document.querySelector('input:checked');
     let resultado = calcular(Number(numero1.innerHTML), Number(numero2.innerHTML), operacao.innerHTML);
@@ -120,16 +82,16 @@ function verificar() {
     sortear();
 }
 
-//função para iniciar o quiz
+//*função para iniciar o quiz
 sortear();
 
-//função para o botão de proximo
+//*função para o botão de proximo
 botao.addEventListener('click', (event) => {
     event.preventDefault();
     verificar();
 });
 
-//função para ouvir o enter e chamar a função verificar
+//*função para ouvir o enter e chamar a função verificar
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         verificar();
