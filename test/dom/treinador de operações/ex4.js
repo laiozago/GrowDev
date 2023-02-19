@@ -10,7 +10,7 @@ const botao = document.getElementById('btnProximo');
         case '-':
             resultado = num1 - num2;
             break;
-        case '*':
+        case 'x':
             resultado = num1 * num2;
             break;
         case '/':
@@ -27,7 +27,7 @@ function sortear() {
     const numero1 = document.getElementById('numero1');
     const numero2 = document.getElementById('numero2');
     const operacao = document.getElementById('operacao');
-    const operacoes = ['+', '-', '*', '/'];
+    const operacoes = ['+', '-', 'x', '/'];
     let num1 = Math.floor(Math.random() * 200) - 100;
     let num2 = Math.floor(Math.random() * 200) - 100;
 
