@@ -128,3 +128,10 @@ botao.addEventListener('click', (event) => {
     event.preventDefault();
     verificar();
 });
+
+//função para ouvir o enter e chamar a função verificar
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        verificar();
+    }
+});
