@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <form action="cadastro" id="formulario">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nomeCompleto">Nome</label>
+                <input type="text" name="nomeCompleto" id="nomeCompleto">
+                <br><br>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <br><br>
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf">
+                <br><br>
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco">
+                <br><br>
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade">
+                <br><br>
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="selecionar">Selecionar</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Conhecimentos</legend>
+                <input type="checkbox" name="html" id="html" value="html">
+                <label for="html">HTML</label>
+                <br><br>
+                <input type="checkbox" name="css" id="css" value="css">
+                <label for="css">CSS</label>
+                <br><br>
+                <input type="checkbox" name="js" id="js" value="js">
+                <label for="js">JavaScript</label>
+                <br><br>
+                <input type="checkbox" name="java" id="java" value="java">
+                <label for="java">Java</label>
+                <br><br>
+                <input type="checkbox" name="python" id="python" value="python">
+                <label for="python">Python</label>
+                <br><br>
+                <input type="checkbox" name="php" id="php" value="php">
+                <label for="php">PHP</label>
+                <br><br>
+                <input type="checkbox" name="c" id="c" value="c">
+                <label for="c">C</label>
+                <br><br>
+                <input type="checkbox" name="c++" id="c++" value="c++">
+                <label for="c++">C++</label>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Resumo do currículo</legend>
+                <textarea name="resumo" id="resumo" cols="50" rows="10"></textarea>
+                <p>Ou se preferir</p>
+                <label for="curriculo">Enviar curriculo</label>
+                <input type="file" name="curriculo" id="curriculo">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Cargo</legend>
+                <input type="radio" name="cargo" id="estagiario" value="estagiario">
+                <label for="estagiario">Estagiário</label>
+                <br><br>
+                <input type="radio" name="cargo" id="junior" value="junior">
+                <label for="junior">Júnior</label>
+                <br><br>
+                <input type="radio" name="cargo" id="pleno" value="pleno">
+                <label for="pleno">Pleno</label>
+                <br><br>
+                <input type="radio" name="cargo" id="senior" value="senior">
+                <label for="senior">Sênior</label>
+            </fieldset>
+            <br><br>
+            <input id="botaoCadastrar" type="submit" value="Enviar">
+        </form>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#txt {
+    width: 50%;
+    height: 50px;
+    font-size: 1.5em;
+}
