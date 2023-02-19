@@ -46,3 +46,13 @@ h1 {
 #btnProximo:hover {
     background-color: #555;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+footer p,footer a {
+    font-size: 1em;
+    color: #333;
+}
