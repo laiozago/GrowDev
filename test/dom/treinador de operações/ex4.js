@@ -32,11 +32,16 @@ function sortear() {
     let num2 = Math.floor(Math.random() * 200) - 100;
 
     let op = operacoes[Math.floor(Math.random() * 4)];
+    
+    let resultado = calcular(num1, num2, op);
 
-    numero1.innerHTML = num1;
-    numero2.innerHTML = num2;
-    operacao.innerHTML = op;
-
+    while (resultado % 1 != 0) { // loop enquanto o resultado não é inteiro
+        num1 = Math.floor(Math.random() * 200) - 100;
+        num2 = Math.floor(Math.random() * 200) - 100;
+        op = operacoes[Math.floor(Math.random() * 4)];
+        resultado = calcular(num1, num2, op);
+    }
+    
     //função para criar outros 3 numeros inteiros aleatorios para as opções
     function criarOpcoes() {
         let opcoes = [];
@@ -46,7 +51,7 @@ function sortear() {
         }
         return opcoes;
     }
-
+    
     //função para colocar na tela as opçẽos e o resultado numa ordem aleatoria
     function colocarOpcoes() {
         const opcoes = document.querySelectorAll('input');
@@ -59,9 +64,12 @@ function sortear() {
             opcoesLabel[index].innerHTML = opcao;
             opcoes[index].value = opcao;
         });
-
+        
     }
     colocarOpcoes();
+    numero1.innerHTML = num1;
+    numero2.innerHTML = num2;
+    operacao.innerHTML = op;
 }
 
 //*função para verificar se a opção escolhida está correta
