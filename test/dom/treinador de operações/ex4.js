@@ -1,4 +1,10 @@
 const botao = document.getElementById('btnProximo');
+const displayAcertos = document.getElementById('acertos');
+
+const somCerto = document.getElementById('somRespostaCerta');
+const somErrado = document.getElementById('somRespostaErrada');
+
+let acertos = 0;
 
  //*função para calcular o resultado da operação
     function calcular(num1, num2, op) {
@@ -41,7 +47,7 @@ function sortear() {
         op = operacoes[Math.floor(Math.random() * 4)];
         resultado = calcular(num1, num2, op);
     }
-    
+
     //função para criar outros 3 numeros inteiros aleatorios para as opções
     function criarOpcoes() {
         let opcoes = [];
@@ -80,9 +86,13 @@ function verificar() {
     let opcaoEscolhida = document.querySelector('input:checked');
     let resultado = calcular(Number(numero1.innerHTML), Number(numero2.innerHTML), operacao.innerHTML);
     if (opcaoEscolhida.value == resultado) {
-        alert('Parabéns, você acertou!');
+        acertos++;
+        displayAcertos.innerHTML = acertos;
+        somCerto.play();
     } else {
-        alert('Você errou, tente novamente!');
+        acertos = 0;
+        displayAcertos.innerHTML = acertos;
+        somErrado.play();
     }
     //desmarcar a opção escolhida
     opcaoEscolhida.checked = false;
