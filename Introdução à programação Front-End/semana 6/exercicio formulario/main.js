@@ -5,6 +5,7 @@ const usuario = {
     nome: formulario.nomeCompleto.value,
     email: formulario.email.value,
     cpf: formulario.cpf.value,
+    nascimento: formulario.dataNascimento.value,
     endereco: formulario.endereco.value,
     cidade: formulario.cidade.value,
     estado: formulario.estado.value,
