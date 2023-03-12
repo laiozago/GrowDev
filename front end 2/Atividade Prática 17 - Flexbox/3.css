@@ -1,0 +1,176 @@
+/* reset css básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    padding: 10vh 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header p {
+    color: #666;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.botoes button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5667CB;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.botoes button:hover {
+    background-color: #3B4E9A;
+}
+
+.botoes button:active {
+    background-color: #2B3A6F;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main form label {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: .8rem;
+    color: #666;
+}
+
+main form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s;
+    background-color: #f5f5f5;
+}
+
+main form input:focus {
+    background-color: #f5f5f5;
+    outline: none;
+}
+
+main form input[type="submit"] {
+    background-color: #5667CB;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+main form input[type="submit"]:hover {
+    background-color: #3B4E9A;
+}
+
+main form input[type="submit"]:active {
+    background-color: #2B3A6F;
+}
+
+main form p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+main form p a {
+    color: #5667CB;
+    text-decoration: none;
+}
+
+main form p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10vh 10vw;
+    }
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 3rem;
+    }
+    header p {
+        font-size: 1.2rem;
+    }
+    .botoes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .botoes button {
+        width: 100%;
+    }
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main form {
+        width: 100%;
+    }
+    main form label {
+        font-size: 1.5rem;
+    }
+    main form input[type="submit"] {
+        width: 100%;
+    }
+    main form p {
+        font-size: 1.2rem;
+    }
+}
