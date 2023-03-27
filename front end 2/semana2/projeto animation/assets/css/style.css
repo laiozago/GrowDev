@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url(../img/thor.webp);
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button {
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 35vw;
+    animation: pisca 1s infinite;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    animation: pisca 1s ease;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+@keyframes pisca {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
